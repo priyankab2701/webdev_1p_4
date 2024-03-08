@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> Square app by Priyanka</title>
+<style>
+*{ font-size: 50px; font-family: timesnewroma;}
+body { background-color: lightblue;}
+</style>
+<script>
+function compute()
+{
+       event.preventDefault();
+let num = document.getElementById("num");
+let msg = document.getElementById("msg");
+let n = parseFloat(num.value);
+let r = n*n;
+msg.innerHTML =  "square = " + r.toFixed(2);
+}
+</script>
+</head>
+<center>
+<h1>
+Square App
+<h1>
+<form onsubmit = "compute()">
+<input type = "number"  step = "any" placeholder = " Enter a number....." id= "num"  required/>
+<br><br>
+<input type = "Submit"  value = "Find Square "/>
+</form>
+<h2 id= "msg" />
+</center>
+</body>
+</html>
